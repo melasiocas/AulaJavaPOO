@@ -38,7 +38,7 @@ public class Main {
                 case 4:
                     break;
                 case 5:
-                    System.out.println("Fim do Programa!");
+                    System.out.println("Fim do Programa!!");
                     scanner.close();
                     break;
             }
