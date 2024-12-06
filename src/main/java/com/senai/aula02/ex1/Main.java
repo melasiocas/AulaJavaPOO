@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+    static  ArrayList<Tarefa> listaDeTarefas = new ArrayList<Tarefa>();
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Tarefa> ListaDeTarefas = new ArrayList<Tarefa>();
+        ArrayList<Tarefa> listaDeTarefas = new ArrayList<Tarefa>();
 
         String menu = """
                 Escolha uma opção:
@@ -26,22 +28,35 @@ public class Main {
                 case 1:
                     System.out.println("Digite o nome da tarefa: ");
                     String nomeTarefa = scanner.nextLine();
-                    ListaDeTarefas.add(new Tarefa(nomeTarefa, false));
+                    listaDeTarefas.add(new Tarefa(nomeTarefa, false));
                     break;
                 case 2:
-                    for (Tarefa tarefa : ListaDeTarefas) {
-                        System.out.println((ListaDeTarefas.lastIndexOf(tarefa) + 1) + " - " + tarefa);
-                    }
+                    listarTarefas();
                     break;
                 case 3:
+                    listarTarefas();
+                    for (Tarefa tarefa: listaDeTarefas){
+                        System.out.println("Escolha uma tarefa para marcar como concluída: ");
+                        int idTarefa = scanner.nextInt();
+                        listaDeTarefas.get(idTarefa-1).statusConclusao=true;
+                    }
                     break;
                 case 4:
+                    listarTarefas();
+                    System.out.println("Escolha o id da tarefa para excluir: ");
+                    listaDeTarefas.remove(scanner.nextInt()-1);
+                    scanner.nextLine();
                     break;
                 case 5:
                     System.out.println("Fim do Programa!!");
                     scanner.close();
                     break;
             }
-        } while ();
+        } while (opcao!=5);
+    }
+    public static void listarTarefas(){
+        for (Tarefa tarefa: listaDeTarefas){
+            System.out.println(tarefa);
+        }
     }
 }
