@@ -2,7 +2,7 @@ package com.senai.aula01_classe_atributo_metodos.carro;
 
 import java.util.Objects;
 
-public class carro {
+public class Carro {
     String marca;
     String modelo;
     String placa;
@@ -11,7 +11,7 @@ public class carro {
     double precoBase;
     int anoFabricacao;
 
-    public carro(String marca, String modelo, String placa, byte portas, String cor, double precoBase, int anoFabricacao) {
+    public Carro(String marca, String modelo, String placa, byte portas, String cor, double precoBase, int anoFabricacao) {
         this.marca = marca;
         this.modelo = modelo;
         this.placa = placa;
@@ -64,7 +64,7 @@ public class carro {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        carro carro = (carro) o;
+        Carro carro = (Carro) o;
         return portas == carro.portas && Double.compare(precoBase, carro.precoBase) == 0 && anoFabricacao == carro.anoFabricacao && Objects.equals(marca, carro.marca) && Objects.equals(modelo, carro.modelo) && Objects.equals(placa, carro.placa) && Objects.equals(cor, carro.cor);
     }
 

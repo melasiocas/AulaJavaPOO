@@ -11,5 +11,6 @@ public class Tarefa {
 
     @Override
     public String toString() {
-        return String.format("%s - [%s]", nomeTarefa, statusConclusao?"Concluída.":"Pendente.");
+        return String.format("%s - [%s]", nomeTarefa, statusConclusao ? "Concluída." : "Pendente.");
+    }
 }
