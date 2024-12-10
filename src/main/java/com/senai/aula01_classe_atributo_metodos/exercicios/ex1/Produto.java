@@ -13,23 +13,23 @@ public class Produto {
         this.quantidade = quantidade;
     }
     public void exibirDetalhes (){
-        System.out.println("Nome = " + nome + "\n" +
-                            "Preço = " + preco + "\n" +
-                            "Quantidade = " + quantidade + "\n"
+        System.out.println("Nome: " + nome + "\n" +
+                            "Preço: " + preco + "\n" +
+                            "Quantidade: " + quantidade + "\n"
                 );
     }
     public void atualizaEstoque (){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("adicionar ou remover?");
+        System.out.println("adicionar ou remover? (+/-)");
         String x = scanner.nextLine();
 
-        if (x.equals("adicionar")){
+        if (x.equals("+")){
             System.out.println("Digite o valor que deseja adicionar: ");
             int qntadd = scanner.nextInt();
             quantidade += qntadd;
             System.out.println("A quantidade no estoque agora é " + quantidade);
-        } else if (x.equals("remover")) {
+        } else if (x.equals("-")) {
             System.out.println("Digite o valor que deseja remover: ");
             int qntrem = scanner.nextInt();
             quantidade -= qntrem;
@@ -40,6 +40,6 @@ public class Produto {
     }
     public void verificarValorDoEstoque(){
         quantidade *= preco;
-        System.out.println(quantidade);
+        System.out.println(" o valor do estoque é R$" + quantidade);
     }
 }
