@@ -6,6 +6,12 @@ public class Usuario {
     private int CPF;
     private String dataNasc;
 
+    public Usuario(String nome, int CPF, String dataNasc) {
+        this.nome = nome;
+        this.CPF = CPF;
+        this.dataNasc = dataNasc;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -33,8 +39,8 @@ public class Usuario {
     @Override
     public String toString() {
         return  nome +
-                " | CPF: " + CPF +
-                " | Data de Nasc: " + dataNasc;
+                " (CPF: " + CPF +
+                " - Data de Nasc: " + dataNasc + ")";
     }
 }
 

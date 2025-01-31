@@ -1,10 +1,18 @@
 package com.senai.aula03.encapsulamento.exemplos.conta_bancaria;
 
+
 public class ContaBancaria {
     private Usuario usuario;
     private int numeroConta;
-    private double saldo;
+    private int saldo;
     private String nomeBanco;
+
+    public ContaBancaria(Usuario usuario, int numeroConta, int saldo, String nomeBanco) {
+        this.usuario = usuario;
+        this.numeroConta = numeroConta;
+        this.saldo = saldo;
+        this.nomeBanco = nomeBanco;
+    }
 
     public Usuario getUsuario() {
         return usuario;
@@ -26,9 +34,6 @@ public class ContaBancaria {
         return saldo;
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
 
     public String getNomeBanco() {
         return nomeBanco;
@@ -46,4 +51,28 @@ public class ContaBancaria {
                 "Saldo            | " + saldo + "\n" +
                 "Nome do Banco    | " + nomeBanco;
     }
+    public void sacar (int valor){
+
+        if(this.saldo >= valor && valor > 0){
+            this.saldo -= valor;
+            System.out.println("Saque efetuado com sucesso. Saldo atual do cliente : " + this.saldo); //arrumar, colocar o cliente que vai receber
+        } else {
+            System.out.println("Saque não aprovado, saldo insuficiente");
+        }
+    }
+    public void depositar(int valor){
+        if(valor > 0) {
+            this.saldo += valor;
+            System.out.println("Depósito efetuado com sucesso. Saldo atual: " + this.saldo);
+        } else {
+            System.out.println("Depósito cancelado. Você não pode realizar um depósito negativo."); //arrumar, colocar o cliente que vai receber
+        }
+    }
+    public void transferir(int valor, ContaBancaria contadestino){
+        sacar(valor);
+        contadestino.depositar(valor);
+    }
 }
+
+
+
