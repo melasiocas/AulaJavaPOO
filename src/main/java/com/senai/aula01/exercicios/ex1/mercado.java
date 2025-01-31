@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class mercado {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner=  new Scanner(System.in);
 
         Produto produto1 = new Produto(
                 "leite",

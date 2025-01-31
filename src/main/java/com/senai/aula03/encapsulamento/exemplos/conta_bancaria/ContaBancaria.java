@@ -1,5 +1,6 @@
 package com.senai.aula03.encapsulamento.exemplos.conta_bancaria;
 
+import com.senai.aula03.encapsulamento.exemplos.conta_bancaria.Usuario;
 
 public class ContaBancaria {
     private Usuario usuario;

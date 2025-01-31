@@ -1,5 +1,8 @@
 package com.senai.aula03.encapsulamento.exemplos.conta_bancaria;
 
+import com.senai.aula03.encapsulamento.exemplos.conta_bancaria.ContaBancaria;
+import com.senai.aula03.encapsulamento.exemplos.conta_bancaria.Usuario;
+
 import java.util.Scanner;
 
 public class Main {
@@ -57,9 +60,9 @@ public class Main {
                 System.out.println("Valor que você deseja transferir: ");
                 int valorTransferencia = scanner.nextInt();
 
-                System.out.println("Selecione o usuário que você deseja transferir: \n 1. " + contaBancaria1.getUsuario()
-                        + "\n 2. " + contaBancaria2.getUsuario()
-                        + "\n 3. " + contaBancaria3.getUsuario()
+                System.out.println("Selecione o usuário que você deseja transferir: \n 1. " + contaBancaria1.getUsuario().getNome()
+                        + "\n 2. " + contaBancaria2.getUsuario().getNome()
+                        + "\n 3. " + contaBancaria3.getUsuario().getNome()
                 );
                 int opcao2 = scanner.nextInt();
                 switch (opcao2) {
