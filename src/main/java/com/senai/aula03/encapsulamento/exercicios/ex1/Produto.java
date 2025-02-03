@@ -2,26 +2,36 @@ package com.senai.aula03.encapsulamento.exercicios;
 
 import java.util.ArrayList;
 
+import static com.senai.aula03.encapsulamento.exercicios.Main.scanner;
+
 public class Produto {
 
-    static ArrayList<Produto> listaProdutos = new ArrayList<>();
     private String nome;
     private double preco;
 
     public Produto(String nome, double preco) {
         this.nome = nome;
-        this.preco = preco;
+        this.preco = setPreco(preco);
     }
 
     public double getPreco() {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public double setPreco(double preco) {
         if (preco > 0) {
             this.preco = preco;
+            return preco;
         } else {
             System.out.println("Não é possível adicionar um preço negativo ou igual a zero.");
+                do{
+                    System.out.println("Erro. Digite um preço novo: ");
+                    preco = scanner.nextDouble();
+                    scanner.nextLine();
+
+                } while (preco < 0);
+
+        return preco;
         }
     }
 
@@ -39,12 +49,5 @@ public class Produto {
                 "Preço | " + preco;
     }
 
-    public void cadastrarProduto(Produto nomeProduto) {
-        listaProdutos.add(nomeProduto);
-    }
-    public void mostrarArray(){
-        for (Produto item : listaProdutos) {
-            System.out.println(item.toString());
-        }
-    }
+
 }
