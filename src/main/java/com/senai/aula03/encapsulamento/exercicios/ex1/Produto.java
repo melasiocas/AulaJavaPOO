@@ -1,10 +1,11 @@
-package com.senai.aula03.encapsulamento.exercicios;
+package com.senai.aula03.encapsulamento.exercicios.ex1;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
-import static com.senai.aula03.encapsulamento.exercicios.Main.scanner;
 
 public class Produto {
+Scanner scanner = new Scanner(System.in);
 
     private String nome;
     private double preco;
