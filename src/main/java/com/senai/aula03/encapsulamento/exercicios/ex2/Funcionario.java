@@ -9,7 +9,7 @@ public class Funcionario {
 
     public Funcionario(String nome, double salario, String cargo) {
         this.nome = setNome(nome);
-        this.salario = salario;
+        this.salario = setSalario(salario);
         this.cargo = cargo;
     }
 
@@ -36,8 +36,14 @@ public class Funcionario {
         return salario;
     }
 
-    public void setSalario(double salario) {
-        this.salario = salario;
+    public double setSalario(double salario) {
+        if(salario < 1320.00){
+            salario = 1320.00;
+            return salario;
+        } else {
+            this.salario = salario;
+            return salario;
+        }
     }
 
     public String getCargo() {

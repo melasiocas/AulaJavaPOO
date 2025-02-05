@@ -1,7 +1,5 @@
 package com.senai.aula03.encapsulamento.exercicios.ex2;
 
-
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,7 +8,7 @@ public class Main { public static Scanner scanner = new Scanner(System.in);
 
 
     public static void main(String[] args) {
-
+        System.out.println("");
         cadastrarFuncionarios();
         mostrarFuncionarios(funcionarios);
 
