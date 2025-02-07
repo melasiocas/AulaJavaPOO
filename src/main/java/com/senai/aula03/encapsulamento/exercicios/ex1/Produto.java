@@ -29,9 +29,7 @@ Scanner scanner = new Scanner(System.in);
                     System.out.println("Erro. Digite um preço novo: ");
                     preco = scanner.nextDouble();
                     scanner.nextLine();
-
                 } while (preco < 0);
-
         return preco;
         }
     }

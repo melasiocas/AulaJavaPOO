@@ -3,23 +3,39 @@ package com.senai.aula03.encapsulamento.exercicios.ex2;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static com.senai.aula03.encapsulamento.exercicios.ex2.Funcionario.funcionarios;
+import static com.senai.aula03.encapsulamento.exercicios.ex2.Funcionario.mostrarFuncionarios;
+
 public class Main { public static Scanner scanner = new Scanner(System.in);
-    static ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
+
 
 
     public static void main(String[] args) {
-        System.out.println("");
         cadastrarFuncionarios();
         mostrarFuncionarios(funcionarios);
+        alterarSalario();
 
     }
 
-    public static void cadastrarFuncionarios(){
-        System.out.println("Quantos funcionários você deseja cadastrar?");
-        int qntProduto = scanner.nextInt();
+    public static void alterarSalario() {
+        mostrarFuncionarios(funcionarios);
+        System.out.print("Id do funcionário que você deseja alterar o salário: ");
+        int id = scanner.nextInt();
         scanner.nextLine();
 
-        for (int i = 0; i < qntProduto; i++) {
+        System.out.println("Novo salário:");
+        double novoSalario = scanner.nextDouble();
+        scanner.nextLine();
+
+        funcionarios.get(id).alterarSalario(id, novoSalario);
+    }
+
+    public static void cadastrarFuncionarios(){
+        System.out.print("Quantos funcionários você deseja cadastrar? ");
+        int qntFuncionario = scanner.nextInt();
+        scanner.nextLine();
+
+        for (int i = 0; i < qntFuncionario; i++) {
             System.out.println("------ Funcionário " + (i+1) + " ------");
             System.out.print("Nome: ");
             String nome = scanner.nextLine();
@@ -44,12 +60,6 @@ public class Main { public static Scanner scanner = new Scanner(System.in);
             };
 
             funcionarios.add(new Funcionario(nome, salario, cargo));
-        }
-    }
-    public static void mostrarFuncionarios(ArrayList funcionarios) {
-        for (int i = 0; i < funcionarios.size(); i++) {
-            System.out.println("--------------");
-            System.out.println(funcionarios.get(i));
         }
     }
 }

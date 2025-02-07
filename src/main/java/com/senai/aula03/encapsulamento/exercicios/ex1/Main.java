@@ -1,11 +1,13 @@
 package com.senai.aula03.encapsulamento.exercicios.ex1;
 
+import com.senai.aula03.encapsulamento.exercicios.ex1.Produto;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
-    public static Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
     static ArrayList<Produto> produtos = new ArrayList<Produto>();
 
 
