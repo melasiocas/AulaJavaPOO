@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static com.senai.aula03.encapsulamento.exercicios.ex2.Main.menu;
+
 public class Funcionario {
 
 static ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
@@ -35,7 +37,6 @@ Scanner scanner = new Scanner(System.in);
         } else {
             return nome;
         }
-
     }
 
     public double getSalario() {
@@ -65,17 +66,15 @@ Scanner scanner = new Scanner(System.in);
             System.out.println("ID      | " + i);
             System.out.println(funcionarios.get(i));
         }
+        menu();
     }
 
     public void alterarSalario(int id, double novoSalario) {
-        try{
         funcionarios.get(id).setSalario(novoSalario);
-    } catch (IndexOutOfBoundsException e) {
-            System.out.println("Problema detectado. Talvez id solicitado não foi encontrado no sistemas");
-        }
+
         System.out.println("Salário Alterado com sucesso.");
-        System.out.println("Funcionário: " + funcionarios.get(id).getNome() +
-                "\nSalário novo: " + funcionarios.get(id).getSalario());
+        System.out.println(" Funcionário   | " + funcionarios.get(id).getNome() +
+                           " Salário novo  | " + funcionarios.get(id).getSalario());
         }
     @Override
     public String toString() {
