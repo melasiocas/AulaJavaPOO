@@ -2,7 +2,7 @@ package com.senai.aula04.heranca.exemplos.banco;
 
 public class Conta {
     private String titular;
-    private double saldo;
+    protected double saldo;
 
     public Conta(String titular, double saldo) {
         this.titular = titular;
