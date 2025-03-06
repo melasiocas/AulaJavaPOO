@@ -62,6 +62,10 @@ public class MainMercado {
     }
 
     public static void adicionarProduto(){
+        System.out.println("Quantos produtos você deseja cadastrar?");
+        int qntProdutos = scanner.nextInt();
+        scanner.nextLine();
+
 
     }
 
