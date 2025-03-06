@@ -1,6 +1,4 @@
-package com.senai.aula03.encapsulamento.exercicios.ex1;
-
-import com.senai.aula03.encapsulamento.exercicios.ex1.Produto;
+package com.senai.aula03.encapsulamento.ex1;
 
 import java.util.ArrayList;
 import java.util.Scanner;

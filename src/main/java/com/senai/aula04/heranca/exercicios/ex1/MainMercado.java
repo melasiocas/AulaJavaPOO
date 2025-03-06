@@ -1,6 +1,6 @@
 package com.senai.aula04.heranca.exercicios.ex1;
 
-import static com.senai.aula03.encapsulamento.exercicios.ex2.Main.scanner;
+import static com.senai.aula03.encapsulamento.ex2.Main.scanner;
 
 public class MainMercado {
     public static void main(String[] args) {
@@ -8,15 +8,14 @@ public class MainMercado {
     }
 
     public static void menu() {
+
         int opcaoInt;
         do {
            System.out.print("""
-                   1 - Exibir Produtos existentes.
-                   2 - Mostrar Quantidade no Estoque.
-                   3 - Mostrar Valor total de Estoque.
-                   5 - Mudar Quantidade do Estoque.
-                   5 - Adicionar novos produtos.
-                   6 - Sair.
+                   1 - Adicionar produtos.
+                   2 - Mostrar produtos.
+                   3 - Editar Quantidade do Estoque.
+                   4 - Sair.
                    """);
            String opcao = scanner.nextLine();
            opcaoInt = castingStringForNumber(opcao);
@@ -25,6 +24,7 @@ public class MainMercado {
 
             switch (opcaoInt) {
                 case 1:
+                    adicionarProduto();
                     menu();
                     break;
                 case 2:
@@ -34,12 +34,7 @@ public class MainMercado {
                     menu();
                     break;
                 case 4:
-                    menu();
-                    break;
-                case 5:
-                    menu();
-                    break;
-                case 6:
+                    System.out.println("Encerrando o Programa...");
                     break;
             }
         }
@@ -66,5 +61,8 @@ public class MainMercado {
         }
     }
 
+    public static void adicionarProduto(){
+
+    }
 
 }

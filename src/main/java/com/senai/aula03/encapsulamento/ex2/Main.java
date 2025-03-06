@@ -1,10 +1,9 @@
-package com.senai.aula03.encapsulamento.exercicios.ex2;
+package com.senai.aula03.encapsulamento.ex2;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-import static com.senai.aula03.encapsulamento.exercicios.ex2.Funcionario.funcionarios;
-import static com.senai.aula03.encapsulamento.exercicios.ex2.Funcionario.mostrarFuncionarios;
+import static com.senai.aula03.encapsulamento.ex2.Funcionario.funcionarios;
+import static com.senai.aula03.encapsulamento.ex2.Funcionario.mostrarFuncionarios;
 
 public class Main { public static Scanner scanner = new Scanner(System.in);
 

@@ -1,4 +1,4 @@
-package com.senai.aula03.encapsulamento.exemplos.conta_bancaria;
+package com.senai.aula03.encapsulamento.ex3;
 
 public class Usuario {
 

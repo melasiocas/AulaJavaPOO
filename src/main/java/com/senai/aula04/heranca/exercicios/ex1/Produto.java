@@ -1,7 +1,5 @@
 package com.senai.aula04.heranca.exercicios.ex1;
 
-import com.senai.aula03.encapsulamento.exercicios.ex2.Funcionario;
-
 import java.util.ArrayList;
 
 public class Produto {
@@ -46,5 +44,6 @@ public class Produto {
                            "\n Preço      | " + preco +
                            "\n Quantidade | " + quantidade);
    }
+
 
 }

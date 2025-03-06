@@ -1,12 +1,11 @@
-package com.senai.aula03.encapsulamento.exercicios.ex2;
+package com.senai.aula03.encapsulamento.ex2;
 
 import java.util.ArrayList;
 
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-import static com.senai.aula03.encapsulamento.exercicios.ex2.Main.menu;
+import static com.senai.aula03.encapsulamento.ex2.Main.menu;
 
 public class Funcionario {
 
