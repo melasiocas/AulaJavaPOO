@@ -1,5 +1,8 @@
 package com.senai.aula04.heranca.exercicios.ex1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.senai.aula03.encapsulamento.ex2.Main.scanner;
 
 public class MainMercado {
@@ -66,6 +69,24 @@ public class MainMercado {
         int qntProdutos = scanner.nextInt();
         scanner.nextLine();
 
+        List<Produto> listaProdutos = new ArrayList<>();
+
+
+        for (int i = 0; i < qntProdutos; i++) {
+            System.out.println("------ Produto " + (i+1) + " ------");
+            System.out.print("Quantidade no estoque: ");
+            int qnt = scanner.nextInt();
+
+            System.out.print("Nome: ");
+            String nome = scanner.nextLine();
+
+            System.out.print("Preço: ");
+            double preco = scanner.nextDouble();
+            scanner.nextLine();
+
+            Produto produto = new Produto(qnt, preco, nome);
+            listaProdutos.add(produto);
+        }
 
     }
 
