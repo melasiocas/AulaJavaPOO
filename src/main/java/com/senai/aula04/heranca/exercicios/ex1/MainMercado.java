@@ -99,11 +99,4 @@ public class MainMercado {
     public static void mostrarProduto() {
         listaProdutos.forEach(produto -> System.out.println(produto));
     }
-
-    public static void editarEstoque() {
-        mostrarProduto();
-        System.out.println("Qual elemento você deseja editar?");
-        String elemento = scanner.nextLine();
-        int indice = listaProdutos.indexOf(elemento);
-    }
 }
