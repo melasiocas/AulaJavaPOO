@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class Produto {
     static ArrayList<Produto> produtos = new ArrayList<Produto>();
 
-   private String nome;
-   private double preco;
-   private int quantidade;
+    private String nome;
+    private double preco;
+    private int quantidade;
 
     public Produto(int qnt, double preco, String nome) {
         this.quantidade = qnt;
@@ -39,11 +39,14 @@ public class Produto {
         this.quantidade = quantidade;
     }
 
-    public void exibirDetalhesDoProduto(){
-        System.out.println(" Nome       | " + nome +
-                           "\n Preço      | " + preco +
-                           "\n Quantidade | " + quantidade);
-   }
-
+    @Override
+    public String toString() {
+        return ("---------------------------" +
+                "\n Nome       | " + nome +
+                "\n Preço      | " + preco +
+                "\n Quantidade | " + quantidade +
+                "\n---------------------------"
+        );
+    }
 
 }

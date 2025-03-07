@@ -6,7 +6,7 @@ import java.util.List;
 import static com.senai.aula03.encapsulamento.ex2.Main.scanner;
 
 public class MainMercado {
-    List<Produto> listaProdutos = new ArrayList<>();
+    static List<Produto> listaProdutos = new ArrayList<>();
 
     public static void main(String[] args) {
         menu();
@@ -19,8 +19,9 @@ public class MainMercado {
             System.out.print("""
                     1 - Adicionar produtos.
                     2 - Mostrar produtos.
-                    3 - Editar Quantidade do Estoque.
-                    4 - Sair.
+                    3 - Editar quantidade do estoque.
+                    4 - Calcular Valor de estoque.
+                    5 - Sair.
                     """);
             String opcao = scanner.nextLine();
             opcaoInt = castingStringForNumber(opcao);
@@ -40,8 +41,12 @@ public class MainMercado {
                 menu();
                 break;
             case 4:
+                menu();
+                break;
+            case 5:
                 System.out.println("Encerrando o Programa...");
                 break;
+
         }
     }
 
@@ -91,8 +96,14 @@ public class MainMercado {
         }
     }
 
-    public static void mostrarProdutos() {
-        list
+    public static void mostrarProduto() {
+        listaProdutos.forEach(produto -> System.out.println(produto));
     }
 
+    public static void editarEstoque() {
+        mostrarProduto();
+        System.out.println("Qual elemento você deseja editar?");
+        String elemento = scanner.nextLine();
+        int indice = listaProdutos.indexOf(elemento);
+    }
 }
