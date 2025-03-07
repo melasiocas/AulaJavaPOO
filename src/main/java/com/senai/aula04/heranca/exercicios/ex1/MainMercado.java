@@ -6,6 +6,8 @@ import java.util.List;
 import static com.senai.aula03.encapsulamento.ex2.Main.scanner;
 
 public class MainMercado {
+    List<Produto> listaProdutos = new ArrayList<>();
+
     public static void main(String[] args) {
         menu();
     }
@@ -14,47 +16,48 @@ public class MainMercado {
 
         int opcaoInt;
         do {
-           System.out.print("""
-                   1 - Adicionar produtos.
-                   2 - Mostrar produtos.
-                   3 - Editar Quantidade do Estoque.
-                   4 - Sair.
-                   """);
-           String opcao = scanner.nextLine();
-           opcaoInt = castingStringForNumber(opcao);
+            System.out.print("""
+                    1 - Adicionar produtos.
+                    2 - Mostrar produtos.
+                    3 - Editar Quantidade do Estoque.
+                    4 - Sair.
+                    """);
+            String opcao = scanner.nextLine();
+            opcaoInt = castingStringForNumber(opcao);
 
         } while (!(opcaoInt >= 1 && opcaoInt <= 6));
 
-            switch (opcaoInt) {
-                case 1:
-                    adicionarProduto();
-                    menu();
-                    break;
-                case 2:
-                    menu();
-                    break;
-                case 3:
-                    menu();
-                    break;
-                case 4:
-                    System.out.println("Encerrando o Programa...");
-                    break;
-            }
+        switch (opcaoInt) {
+            case 1:
+                adicionarProduto();
+                menu();
+                break;
+            case 2:
+                mostrarProduto();
+                menu();
+                break;
+            case 3:
+                menu();
+                break;
+            case 4:
+                System.out.println("Encerrando o Programa...");
+                break;
         }
-
-    public static boolean InputCheck (String input){
-    try{
-        Integer.parseInt(input);
-        return true;
-    } catch (NumberFormatException e){
-        return false;
     }
+
+    public static boolean InputCheck(String input) {
+        try {
+            Integer.parseInt(input);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 
     public static int castingStringForNumber(String input) {
         if (InputCheck(input) == true) {
             int inputInt = Integer.parseInt(input);
-                return inputInt;
+            return inputInt;
         } else {
             do {
                 System.out.println("O valor inserido não é um número válido. Digite o valor novamente: ");
@@ -64,18 +67,17 @@ public class MainMercado {
         }
     }
 
-    public static void adicionarProduto(){
+    public static void adicionarProduto() {
         System.out.println("Quantos produtos você deseja cadastrar?");
         int qntProdutos = scanner.nextInt();
         scanner.nextLine();
 
-        List<Produto> listaProdutos = new ArrayList<>();
-
 
         for (int i = 0; i < qntProdutos; i++) {
-            System.out.println("------ Produto " + (i+1) + " ------");
+            System.out.println("------ Produto " + (i + 1) + " ------");
             System.out.print("Quantidade no estoque: ");
             int qnt = scanner.nextInt();
+            scanner.nextLine();
 
             System.out.print("Nome: ");
             String nome = scanner.nextLine();
@@ -87,7 +89,10 @@ public class MainMercado {
             Produto produto = new Produto(qnt, preco, nome);
             listaProdutos.add(produto);
         }
+    }
 
+    public static void mostrarProdutos() {
+        list
     }
 
 }
