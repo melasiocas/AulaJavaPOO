@@ -1,13 +1,13 @@
-package com.senai.aula04.heranca.exercicios.ex1;
+package com.senai.mainRef;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.senai.aula03.encapsulamento.ex2.Main.scanner;
-import static com.senai.aula04.heranca.exercicios.ex1.Produto.*;
+import static com.senai.mainRef.Mercado.*;
 
 class Compartilhado {
-    public static List<Produto> listaProdutos = new ArrayList<>();
+    public static List<Mercado> listaProdutos = new ArrayList<>();
 }
 
 public class MainMercado {
@@ -37,9 +37,21 @@ public class MainMercado {
                 scanner.nextLine();
 
                 for (int i = 0; i < qntProdutos; i++) {
-                    int id = i;
 
-                    System.out.println("------ Produto " + (id) + " ------");
+                    int id;
+                    int idScanner;
+
+                    if (Compartilhado.listaProdutos.isEmpty()) {
+                         id = i; // se estiver vazia
+                         idScanner = id + 1;
+                    } else {
+                        int tamanho = Compartilhado.listaProdutos.size();
+                        id = tamanho;
+                        idScanner = id;
+                    }
+
+
+                    System.out.println("------ Produto ------");
 
 
                     System.out.print("Nome: ");
