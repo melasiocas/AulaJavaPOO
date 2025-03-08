@@ -11,8 +11,8 @@ public class Eletronico extends Produto {
         this.voltagem = voltagem;
     }
 
-    public Eletronico(int qnt, double preco, String nome, int voltagem) {
-        super(qnt, preco, nome);
+    public Eletronico(int ID, int qnt, double preco, String nome, int voltagem) {
+        super(ID, qnt, preco, nome);
         this.voltagem = voltagem;
     }
 }

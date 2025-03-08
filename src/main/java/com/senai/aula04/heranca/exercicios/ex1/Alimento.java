@@ -11,8 +11,8 @@ public class Alimento extends Produto{
         this.dataValidade = dataValidade;
     }
 
-    public Alimento(int qnt, double preco, String nome, int dataValidade) {
-        super(qnt, preco, nome);
+    public Alimento(int ID, int qnt, double preco, String nome, int dataValidade) {
+        super(ID, qnt, preco, nome);
         this.dataValidade = dataValidade;
     }
 }
