@@ -1,11 +1,14 @@
 package com.senai.aula04.heranca.exercicios.ex1;
 
-public class Produto {
+public class ProdutoNew {
+<<<<<<< HEAD
     private String nome;
     private double preco;
     private int qnt;
 
-    public Produto(String nome, double preco, int qnt) {
+    public ProdutoNew(String nome, double preco, int qnt) {
+=======
+
         this.nome = nome;
         this.preco = preco;
         this.qnt = qnt;
@@ -35,6 +38,7 @@ public class Produto {
         this.qnt = qnt;
     }
 
+<<<<<<< HEAD
     @Override
     public String toString() {
         return    " Nome       | " + nome +
@@ -43,3 +47,5 @@ public class Produto {
                ;
     }
 }
+=======
+

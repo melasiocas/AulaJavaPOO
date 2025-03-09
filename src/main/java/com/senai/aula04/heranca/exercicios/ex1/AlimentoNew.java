@@ -1,9 +1,9 @@
 package com.senai.aula04.heranca.exercicios.ex1;
 
-public class Alimento extends Produto {
+public class AlimentoNew extends ProdutoNew {
     private String dataValidade;
 
-    public Alimento(String nome, double preco, int qnt, String dataValidade) {
+    public AlimentoNew(String nome, double preco, int qnt, String dataValidade) {
         super(nome, preco, qnt);
         this.dataValidade = dataValidade;
     }
@@ -16,6 +16,7 @@ public class Alimento extends Produto {
         this.dataValidade = dataValidade;
     }
 
+<<<<<<< HEAD
     @Override
     public String toString() {
         return  "--------------------------" +
@@ -24,5 +25,7 @@ public class Alimento extends Produto {
                 "\n Quantidade | " + getQnt() +
                 "\n Validade   | " + dataValidade
                 ;
+=======
+
     }
 }

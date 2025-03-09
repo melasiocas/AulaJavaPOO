@@ -2,14 +2,14 @@ package com.senai.aula04.heranca.exercicios.ex1;
 
 public class Main {
     public static void main(String[] args) {
-        Alimento a1 = new Alimento(
+        AlimentoNew a1 = new AlimentoNew(
                 "Leite",
                 5,
                 300,
                 "06-07-25"
         );
 
-        Eletronico e1 = new Eletronico(
+        EletronicoNew e1 = new EletronicoNew(
                 "Celular",
                 1000,
                 150,

@@ -1,9 +1,9 @@
 package com.senai.aula04.heranca.exercicios.ex1;
 
-public class Eletronico extends Produto{
+public class EletronicoNew extends ProdutoNew {
     private int voltagem;
 
-    public Eletronico(String nome, double preco, int qnt, int voltagem) {
+    public EletronicoNew(String nome, double preco, int qnt, int voltagem) {
         super(nome, preco, qnt);
         this.voltagem = voltagem;
     }
@@ -16,6 +16,7 @@ public class Eletronico extends Produto{
         this.voltagem = voltagem;
     }
 
+<<<<<<< HEAD
     @Override
     public String toString() {
         return  "--------------------------" +
@@ -24,5 +25,7 @@ public class Eletronico extends Produto{
                 "\n Quantidade | " + getQnt() +
                 "\n Voltagem   | " + voltagem
                 ;
+=======
+
     }
 }
