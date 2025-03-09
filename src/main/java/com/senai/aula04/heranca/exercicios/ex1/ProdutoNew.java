@@ -8,7 +8,6 @@ public class ProdutoNew {
 
     public ProdutoNew(String nome, double preco, int qnt) {
 
-
         this.nome = nome;
         this.preco = preco;
         this.qnt = qnt;

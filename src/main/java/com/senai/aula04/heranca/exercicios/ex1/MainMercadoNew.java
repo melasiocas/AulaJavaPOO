@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.senai.aula03.encapsulamento.ex2.Main.scanner;
+import static com.senai.mainRef.Mercado.*;
 
 class CompartilhadoNew {
     public static List<ProdutoNew> listaProdutos = new ArrayList<>();
