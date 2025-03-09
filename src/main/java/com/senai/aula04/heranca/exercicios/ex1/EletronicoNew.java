@@ -16,7 +16,6 @@ public class EletronicoNew extends ProdutoNew {
         this.voltagem = voltagem;
     }
 
-<<<<<<< HEAD
     @Override
     public String toString() {
         return  "--------------------------" +
@@ -25,7 +24,6 @@ public class EletronicoNew extends ProdutoNew {
                 "\n Quantidade | " + getQnt() +
                 "\n Voltagem   | " + voltagem
                 ;
-=======
 
     }
 }

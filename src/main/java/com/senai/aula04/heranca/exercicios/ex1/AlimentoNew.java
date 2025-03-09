@@ -16,7 +16,7 @@ public class AlimentoNew extends ProdutoNew {
         this.dataValidade = dataValidade;
     }
 
-<<<<<<< HEAD
+
     @Override
     public String toString() {
         return  "--------------------------" +
@@ -25,7 +25,6 @@ public class AlimentoNew extends ProdutoNew {
                 "\n Quantidade | " + getQnt() +
                 "\n Validade   | " + dataValidade
                 ;
-=======
 
     }
 }
