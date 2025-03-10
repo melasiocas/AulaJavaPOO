@@ -2,6 +2,7 @@ package com.senai.aula05.polimorfismo.exercicios.ex5;
 
 public class FolhaDePagamento {
     public static void main(String[] args) {
+
      Salario salarioMinimo = new Salario(
              1500
      );

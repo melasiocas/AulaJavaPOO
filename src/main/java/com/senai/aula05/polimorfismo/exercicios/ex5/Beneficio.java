@@ -1,6 +1,6 @@
 package com.senai.aula05.polimorfismo.exercicios.ex5;
 
-public class Beneficio {
+abstract class Beneficio {
     private double salarioBruto;
 
     public Beneficio(double salarioBruto) {
@@ -15,11 +15,7 @@ public class Beneficio {
         this.salarioBruto = salarioBruto;
     }
 
-    public double calcularSalarioLiquido(double descontoSalarial, double salarioBruto) {
-        return 0;
-    }
+    abstract public double calcularSalarioLiquido(double descontoSalarial, double salarioBruto);
 
-    public String emitirFolhaDePagamento() {
-        return "";
-    }
+
 }

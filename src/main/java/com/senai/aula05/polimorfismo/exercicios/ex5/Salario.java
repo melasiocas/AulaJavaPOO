@@ -1,18 +1,19 @@
 package com.senai.aula05.polimorfismo.exercicios.ex5;
 
-public class Salario extends Beneficio{
-    ValeAlimentacao B1 = new ValeAlimentacao(getSalarioBruto());
-    PlanoDeSaude B2 = new PlanoDeSaude(getSalarioBruto());
-    AuxilioTransporte B3 = new AuxilioTransporte(getSalarioBruto());
+public class Salario{
+    private double Salario;
+    private ValeAlimentacao B1 = new ValeAlimentacao(Salario);
+    private PlanoDeSaude B2 = new PlanoDeSaude(Salario);
+    private AuxilioTransporte B3 = new AuxilioTransporte(Salario);
 
-    public Salario(double salarioBruto) {
-        super(salarioBruto);
+    public Salario(double salario) {
+        Salario = salario;
     }
 
-    @Override
     public String emitirFolhaDePagamento() {
-         double totalBeneficios =  B1.getValorBeneficio() + B2.getValorBeneficio() + B3.getValorBeneficio();
+         double totalBeneficios = B1.getValorBeneficio() + B2.getValorBeneficio() + B3.getValorBeneficio();
          double salarioLiquido = getSalarioBruto() - totalBeneficios;
+
          return  "\n-----------------------------------" +
                  "\n| Salário Bruto         R$" + String.format("%.2f", getSalarioBruto()) + " |" +
                  "\n-----------------------------------" +

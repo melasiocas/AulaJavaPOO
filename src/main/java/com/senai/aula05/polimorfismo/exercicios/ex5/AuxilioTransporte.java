@@ -31,12 +31,4 @@ public class AuxilioTransporte extends Beneficio {
         salarioLiquido = salarioBruto - (descontoSalarial * salarioBruto);
         return salarioLiquido;
     }
-
-    @Override
-    public String emitirFolhaDePagamento() {
-        return  "\n Beneficio          |  Auxílio Transporte" +
-                "\n Desconto           |  R$" + String.format("%.2f", valorBeneficio) +
-                "\n Salário Bruto      |  R$" + String.format("%.2f", getSalarioBruto()) +
-                "\n Salário Líquido    |  R$" + String.format("%.2f", salarioLiquido);
-    }
 }

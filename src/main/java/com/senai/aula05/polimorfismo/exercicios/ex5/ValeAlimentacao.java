@@ -38,12 +38,4 @@ public class ValeAlimentacao extends Beneficio {
         salarioLiquido = salarioBruto - (descontoSalarial * salarioBruto);
         return salarioLiquido;
     }
-
-    @Override
-    public String emitirFolhaDePagamento() {
-        return  "\n Beneficio          |  Vale Alimentação" +
-                "\n Desconto           |  25% - R$" + String.format("%.2f", valorBeneficio) +
-                "\n Salário Bruto      |  R$" + String.format("%.2f", getSalarioBruto()) +
-                "\n Salário Líquido    |  R$" + String.format("%.2f", salarioLiquido);
-    }
 }
