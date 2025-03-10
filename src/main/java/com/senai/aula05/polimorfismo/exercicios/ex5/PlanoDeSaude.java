@@ -14,6 +14,7 @@ public class PlanoDeSaude extends Beneficio{
     }
 
     public double getValorBeneficio() {
+
         return valorBeneficio;
     }
 
