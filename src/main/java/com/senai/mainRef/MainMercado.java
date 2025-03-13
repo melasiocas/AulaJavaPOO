@@ -28,7 +28,7 @@ public class MainMercado {
             String opcao = scanner.nextLine();
             opcaoInt = castingStringForNumber(opcao);
 
-        } while (!(opcaoInt >= 1 && opcaoInt <= 6));
+        } while (!(opcaoInt >= 1 && opcaoInt <= 5));
 
         switch (opcaoInt) {
             case 1:

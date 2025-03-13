@@ -5,7 +5,6 @@ public class AuxilioTransporte extends Beneficio {
     private double salarioLiquido = calcularSalarioLiquido(valorBeneficio, getSalarioBruto());
 
 
-
     public double getValorBeneficio() {
         return valorBeneficio;
     }

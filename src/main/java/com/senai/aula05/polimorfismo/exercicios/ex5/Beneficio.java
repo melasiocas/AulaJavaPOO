@@ -15,7 +15,9 @@ abstract class Beneficio {
         this.salarioBruto = salarioBruto;
     }
 
-    abstract public double calcularSalarioLiquido(double descontoSalarial, double salarioBruto);
+    public double calcularSalarioLiquido(double descontoSalarial, double salarioBruto) {
+        return 0;
+    }
 
 
 }
