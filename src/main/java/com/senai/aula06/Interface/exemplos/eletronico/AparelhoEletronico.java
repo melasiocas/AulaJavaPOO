@@ -1,4 +1,4 @@
-package com.senai.aula06.ITF.exemplos.eletronico;
+package com.senai.aula06.Interface.exemplos.eletronico;
 
 public interface AparelhoEletronico {
     void ligar();

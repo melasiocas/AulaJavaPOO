@@ -1,4 +1,4 @@
-package com.senai.aula06.ITF.exemplos.veiculo;
+package com.senai.aula06.Interface.exemplos.veiculo;
 
 public interface Veiculo {
     void acelerar();

@@ -1,6 +1,6 @@
-package com.senai.aula06.ITF.exemplos.eletronico;
+package com.senai.aula06.Interface.exemplos.eletronico;
 
-public class Computador implements AparelhoEletronico{
+public class Televisao implements AparelhoEletronico{
     @Override
     public void ligar() {
         System.out.println("Computador Ligado");
