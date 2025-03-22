@@ -12,8 +12,8 @@ abstract class Veiculo {
         this.distanciaDestino = distanciaDestino;
     }
 
-    abstract void calcularTempoEntrega();
-    abstract void verificarCarga();
+    abstract double calcularTempoEntrega();
+    abstract void verificarDados();
 
 
     public double getVelocidade() {
@@ -30,6 +30,14 @@ abstract class Veiculo {
 
     public void setCapacidadeMaximaCarga(double capacidadeMaximaCarga) {
         this.capacidadeMaximaCarga = capacidadeMaximaCarga;
+    }
+
+    public double getCarga() {
+        return carga;
+    }
+
+    public void setCarga(double carga) {
+        this.carga = carga;
     }
 
     public double getDistanciaDestino() {
