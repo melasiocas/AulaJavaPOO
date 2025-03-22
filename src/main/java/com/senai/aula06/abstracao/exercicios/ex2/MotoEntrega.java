@@ -1,7 +1,6 @@
 package com.senai.aula06.abstracao.exercicios.ex2;
 
 public class MotoEntrega extends Veiculo{
-    private double tempoEntrega;
 
     public MotoEntrega(double velocidade, double carga, double distanciaDestino) {
         super(velocidade, carga, distanciaDestino);
@@ -10,7 +9,7 @@ public class MotoEntrega extends Veiculo{
 
     @Override
     double calcularTempoEntrega() {
-        return tempoEntrega =  (getDistanciaDestino() / getVelocidade() * 60);
+        return getDistanciaDestino() / getVelocidade() * 60;
     }
 
     @Override
