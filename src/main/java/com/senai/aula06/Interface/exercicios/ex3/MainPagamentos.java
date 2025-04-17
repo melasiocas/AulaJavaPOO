@@ -8,6 +8,6 @@ public class MainPagamentos {
                 300
         );
 
-        P1.pagar(5724, 10, 5100);
+        P1.pagar(5724, 600, 10);
     }
 }

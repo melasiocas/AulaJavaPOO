@@ -5,12 +5,12 @@ public class CartaoDeCredito implements Pagamentos {
     protected int senha;
     protected double limite;
 
-    public void pagar(int senhaScanner, double parcelas, double valor) {
+    public void pagar(int senhaScanner, double valor, double parcelas) {
         autenticar(senhaScanner, valor, parcelas);
     }
 
     @Override
-    public void autenticar(int senhaScanner, double parcelas, double valor) {
+    public void autenticar(int senhaScanner, double valor, double parcelas) {
         if (senhaScanner == getSenha()) {
             System.out.println("Autenticação Ok...");
         } else {
@@ -24,7 +24,7 @@ public class CartaoDeCredito implements Pagamentos {
     public void validar(double valor, double parcelas) {
         if (!(getLimite() < valor || valor > 1000.00)) {
             System.out.println("Validação Ok...");
-            registrar(valor);
+            registrar(valor, parcelas);
         } else {
             System.out.println("Valor inválido.");
         }
@@ -37,7 +37,7 @@ public class CartaoDeCredito implements Pagamentos {
         System.out.println(" --- Transação registrada ---" +
                          "\n Usuário  | " + getUsuario() +
                          "\n Valor    | " + valor );
-        System.out.printf("Parcela  | %.0f (%dx)%n", valorParcela, (int) parcelas);
+         System.out.printf(" Parcela  | %.0f (%dx)%n", valorParcela, (int) parcelas);
     }
 
     public CartaoDeCredito(String usuario, int senha, double limite) {
